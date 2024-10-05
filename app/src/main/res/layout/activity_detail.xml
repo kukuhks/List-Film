@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_detail_photo"
+            android:layout_width="180dp"
+            android:layout_height="240dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/tv_detail_title"
+            style="@style/TextContent.TitleMedium.Bold.MarginLeftRight.Orange"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:gravity="start"
+            android:maxLines="3"
+            android:text="@string/films_title"
+            app:layout_constraintStart_toEndOf="@id/img_detail_photo"
+            app:layout_constraintTop_toTopOf="@id/img_detail_photo"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_detail_director"
+            style="@style/TextContent.TitleMedium.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/tv_detail_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_title"
+            android:text="@string/director"/>
+
+        <TextView
+            android:id="@+id/tv_detail_director_value"
+            style="@style/TextContent.BodyMedium.Gray"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/tv_detail_director"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_director" />
+
+        <TextView
+            android:id="@+id/tv_detail_year"
+            style="@style/TextContent.TitleMedium.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/tv_detail_director_value"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_director_value"
+            android:text="@string/year" />
+
+        <TextView
+            android:id="@+id/tv_detail_year_value"
+            style="@style/TextContent.BodyMedium.Gray"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/tv_detail_year"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_year" />
+
+        <TextView
+            android:id="@+id/tv_detail_views"
+            style="@style/TextContent.TitleMedium.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/tv_detail_year_value"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_year_value"
+            android:text="@string/views" />
+
+        <TextView
+            android:id="@+id/tv_detail_views_value"
+            style="@style/TextContent.BodyMedium.Gray"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/tv_detail_views"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_views" />
+
+        <TextView
+            style="@style/TextContent.TitleMedium.Bold"
+            android:id="@+id/tv_detail_desc_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toStartOf="@+id/img_detail_photo"
+            app:layout_constraintTop_toBottomOf="@+id/img_detail_photo"
+            android:text="@string/films_description"/>
+
+        <TextView
+            style="@style/TextContent.BodyMedium.Gray"
+            android:id="@+id/tv_detail_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_detail_desc_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_detail_desc_title" />
+
+        <Button
+            android:id="@+id/btn_share"
+            style="@style/button"
+            app:layout_constraintTop_toBottomOf="@+id/tv_detail_desc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/btn_share"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
